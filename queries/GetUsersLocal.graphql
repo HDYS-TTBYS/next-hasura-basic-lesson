@@ -1,0 +1,7 @@
+query GetUsersLocal {
+  users(order_by: { created_at: desc }) @client {
+    id
+    name
+    created_at
+  }
+}

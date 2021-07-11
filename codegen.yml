@@ -1,0 +1,12 @@
+overwrite: true
+schema: 'https://hdys-lesson-hasura.hasura.app/v1/graphql'
+documents: 'queries/**/*.graphql'
+generates:
+  types/generated/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+  ./graphql.schema.json:
+    plugins:
+      - 'introspection'
